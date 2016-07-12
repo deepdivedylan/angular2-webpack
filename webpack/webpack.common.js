@@ -5,13 +5,13 @@ var helpers = require('./helpers');
 
 module.exports = {
 	entry: {
-		'vendor': helpers.root('webpack') + '/vendor.js',
+		'vendor': helpers.root('app') + '/vendor.ts',
 		'app': helpers.root('app') + '/app.js',
 		'css': helpers.root('app') + '/app.css'
 	},
 
 	resolve: {
-		extensions: ['', '.js']
+		extensions: ['', '.js', '.ts']
 	},
 
 	module: {
@@ -41,19 +41,23 @@ module.exports = {
 				test: /\.css$/,
 				include: helpers.root('src', 'app'),
 				loader: 'raw'
+			},
+			{
+				test: /\.ts$/,
+				loaders: ['ts', 'angular2-template-loader']
 			}
 		]
 	},
 
 	plugins: [
 		new webpack.optimize.CommonsChunkPlugin({
-			name: ['app', 'vendor']
+			name: ['app', 'vendor', 'polyfills']
 		}),
 
 		new HtmlWebpackPlugin({
 			inject: 'head',
-			filename: helpers.root('public_html') + '/head-utils.php',
-			template: helpers.root('webpack') + '/head-utils.php'
+			filename: helpers.root('public_html') + '/head-utils.html',
+			template: helpers.root('webpack') + '/head-utils.html'
 		})
 	]
 };
