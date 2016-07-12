@@ -5,4 +5,6 @@
 /typings
 /app/**/*.js
 /app/**/*.js.map
+/public_html/dist
+/public_html/index.html
 /npm-debug.log
