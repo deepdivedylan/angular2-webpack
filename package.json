@@ -1,0 +1,35 @@
+{
+	"name": "angular2-webpack",
+	"version": "1.0.0",
+	"license": "Apache-2.0",
+	"author": {
+		"name": "Dylan McDonald",
+		"email": "dylan@deepdivedylan.com",
+		"url": "https://www.deepdivedylan.com/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dylan-mcdonald/angular2-webpack.git"
+	},
+	"devDependencies": {
+		"bootstrap-loader": "^1.0.10",
+		"bootstrap-sass": "^3.3.6",
+		"css-loader": "^0.23.1",
+		"html-loader": "^0.4.3",
+		"html-webpack-plugin": "^2.15.0",
+		"extract-text-webpack-plugin": "^1.0.1",
+		"file-loader": "^0.8.5",
+		"font-awesome": "^4.6.3",
+		"font-awesome-webpack": "^0.0.4",
+		"less": "^2.7.1",
+		"less-loader": "^2.2.3",
+		"node-sass": "^3.8.0",
+		"resolve-url-loader": "^1.5.0",
+		"sass-loader": "^4.0.0",
+		"style-loader": "0.13.1",
+		"url-loader": "^0.5.7",
+		"webpack": "^1.13.0",
+		"webpack-dev-server": "^1.14.1",
+		"webpack-merge": "^0.14.0"
+	}
+}
